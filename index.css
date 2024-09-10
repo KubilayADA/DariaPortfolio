@@ -114,3 +114,83 @@ section > h1, section > p {
     width: 30rem;
     margin-inline: auto;
 }
+
+/************  NAVBAR ***************/
+nav { 
+    background: var(--color-primary);
+    width: 100vw;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_container a {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+}
+
+.nav_theme-btn {
+    background: transparent;
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+/*-----FLOATING ΝΑVBAR-----*/
+
+.floating_nav {
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: fit-content;
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    padding: 0.7rem;
+    border-radius: 2.2rem;
+    z-index: 9;
+
+}
+
+.floating_nav a {
+    color: var(--color-gray-900);
+    width: 3.2rem;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+/*background for dark mode*/
+
+.dark-theme.variables .floating_nav{
+background: rgba(255, 255, 255, 0.1);
+}
+.floating_nav a.active {
+    background: var(--color-primary);
+    color: white;
+}
